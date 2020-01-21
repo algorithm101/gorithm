@@ -1,0 +1,46 @@
+// You may obtain a copy of the License at
+//
+//     https://opensource.org/licenses/MIT
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+package p0897
+
+import (
+	"testing"
+
+	"algorithm101.io/gorithm/pkg/utils"
+	"github.com/stretchr/testify/suite"
+)
+
+type result struct {
+	arg1   []int
+	target []int
+}
+
+var values = []result{
+	{
+		arg1:   []int{5, 3, 6},
+		target: []int{3, 0xFFFFFFFF, 5, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 6},
+	},
+}
+
+type p0897TestSuite struct {
+	suite.Suite
+}
+
+func (s *p0897TestSuite) Test() {
+	for _, v := range values {
+		r := increasingBST(utils.Trees(v.arg1))
+		utils.AssertTreeEqual(s.Suite, utils.Trees(v.target), r)
+	}
+}
+
+func TestP0897TestSuite(t *testing.T) {
+	s := &p0897TestSuite{}
+	suite.Run(t, s)
+}
