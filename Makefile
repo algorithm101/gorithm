@@ -71,9 +71,8 @@ DOCKER_LABELS ?= git-describe="$(shell date -u +v%Y%m%d)-$(shell git describe --
 
 # Golang standard bin directory.
 # GOPATH ?= $(shell go env GOPATH)
-BIN_DIR := $(firstword $(subst :, , $(PATH)))/bin
-# GOLANGCI_LINT := $(BIN_DIR)/golangci-lint
-GOLANGCI_LINT := golangci-lint
+BIN_DIR := $(firstword $(subst :, , $(PATH)))
+GOLANGCI_LINT := $(BIN_DIR)/golangci-lint
 
 #
 # Define all targets. At least the following commands are required:
@@ -86,7 +85,7 @@ all: lint test
 
 # more info about `GOGC` env: https://github.com/golangci/golangci-lint#memory-usage-of-golangci-lint
 lint: $(GOLANGCI_LINT)
-	@$(GOLANGCI_LINT) run
+	@$(GOLANGCI_LINT) run -v
 
 $(GOLANGCI_LINT):
 	curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b $(BIN_DIR) v1.20.1
