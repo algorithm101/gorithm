@@ -30,12 +30,14 @@ while [[ -n $1 ]]; do
                     exit 1
                     ;;
     esac
-    shift
+    if [[ -n $1 ]]; then
+        shift
+    fi
 done
 
 if [[ (-z $src) || (-d $dest) ]]; then
     usage >&2
-    echo "-s and -d must be provided"
+    echo "-s and -d must been provided"
     exit 1
 fi
 
@@ -45,11 +47,11 @@ if [[ ! (( "$src" =~ ^[0-9]+$ ) && ( "$dest" =~ ^[0-9]+$ )) ]]; then
 fi
 
 if [[ -z $dir ]]; then
-    dir=$(dirname ${BASEPATH})/go
+    dir=$(dirname ${BASEPATH})/pkg
     echo "--dir not provided, use default result ${dir}"
 fi
 
-echo "cpp from ${dir}/p${src} to ${dir}/p${dest} "
+echo "copy from ${dir}/p${src} to ${dir}/p${dest} "
 
 cp -r ${dir}/p${src} ${dir}/p${dest}
 mv ${dir}/p${dest}/p${src}.go ${dir}/p${dest}/p${dest}.go
