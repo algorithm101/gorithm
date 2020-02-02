@@ -11,6 +11,7 @@
 #   make test-docker  - run unit test (in docker containers)
 #   make cp           - cp pkg/pxxxx from template
 #   make clean        - clean up targets
+#   make help         - show help doc
 #
 # Not included but recommended targets:
 #   make e2e-test
@@ -112,6 +113,9 @@ CP_DST ?=
 cp:
 	./hack/cp.sh -s $(CP_SRC) -d $(CP_DST)
 
+help: ## Display this help screen
+	@grep -h -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+	
 .PHONY: clean
 clean:
 	@-rm -vrf ${OUTPUT_DIR}

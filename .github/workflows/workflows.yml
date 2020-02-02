@@ -1,0 +1,48 @@
+name: Main workflow
+on:
+  push:
+    branches:
+    - master
+    - release/*
+    - "*"
+  pull_request:
+jobs:
+  lint:
+    name: make lint
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+      fail-fast: true
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: Set up Go 1.13
+      uses: actions/setup-go@v1
+      with:
+        go-version: 1.13
+      id: go
+    - name: Checkout source code
+      uses: actions/checkout@v1
+    - name: Run lint tools
+      run: make lint
+  unittest:
+    name: make test
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+      fail-fast: true
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: Set up Go 1.13
+      uses: actions/setup-go@v1
+      with:
+        go-version: 1.13
+      id: go
+    - name: Checkout source code
+      uses: actions/checkout@v1
+    - name: Run unittest
+      run: make test
+    - name: Upload Coverage report to CodeCov
+      uses: codecov/codecov-action@v1.0.0
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage.out
