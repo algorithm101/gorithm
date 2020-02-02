@@ -40,7 +40,7 @@ func sortedArrayToBST(nums []int) *TreeNode {
 	}
 
 	root.Left = sortedArrayToBST(nums[0 : len(nums)/2])
-	root.Right = sortedArrayToBST(nums[len(nums)/2+1 : len(nums)])
+	root.Right = sortedArrayToBST(nums[len(nums)/2+1:])
 
 	return root
 }

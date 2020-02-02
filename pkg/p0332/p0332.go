@@ -37,7 +37,7 @@ func findItinerary(tickets [][]string) []string {
 		e := roads.Back()
 		v := e.Value.(string)
 		targets := maps[v]
-		if targets == nil || len(targets) == 0 {
+		if len(targets) == 0 {
 			roads.Remove(e)
 			r = append(r, v)
 		} else {

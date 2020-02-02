@@ -45,7 +45,7 @@ func compareVersion(version1 string, version2 string) int {
 		}
 
 		_fn := fn.(func([]string, []string, interface{}) int)
-		return _fn(v1[1:len(v1)], v2[1:len(v2)], fn)
+		return _fn(v1[1:], v2[1:], fn)
 	}
 
 	return _compare(strings.Split(version1, "."), strings.Split(version2, "."), _compare)

@@ -29,7 +29,7 @@ type result struct {
 	target int
 }
 
-var values = []result{
+var values = []result{ //nolint
 	{
 		arg1:   []int{10, 9, 2, 5, 3, 7, 101, 18},
 		target: 4,

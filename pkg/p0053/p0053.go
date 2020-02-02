@@ -51,7 +51,7 @@ func maxSubArray(nums []int) int {
 
 		mid := len(nums) / 2
 		maxLeft := maxSubArray(nums[:mid])
-		maxRight := maxSubArray(nums[mid:len(nums)])
+		maxRight := maxSubArray(nums[mid:])
 
 		maxLeftMid := 0 - 0xFFFFFFFF
 		currMaxLeftMid := 0

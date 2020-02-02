@@ -35,5 +35,4 @@ func sortColors(nums []int) {
 			cursor++
 		}
 	}
-	return
 }

@@ -17,7 +17,7 @@ package p0409
 func longestPalindrome(s string) int {
 	maps := make(map[rune]int, 100)
 	for _, v := range s {
-		count, _ := maps[v]
+		count := maps[v]
 		maps[v] = count + 1
 	}
 

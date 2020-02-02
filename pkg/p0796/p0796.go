@@ -23,5 +23,5 @@ func rotateString(A string, B string) bool {
 		return false
 	}
 
-	return strings.Index(A+A, B) != -1
+	return strings.Contains(A+A, B)
 }

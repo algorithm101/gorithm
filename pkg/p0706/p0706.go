@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//nolint
 package p0706
 
 type entry struct {
@@ -53,7 +54,6 @@ func (this *MyHashMap) Put(key int, value int) {
 		key:   key,
 		value: value,
 	})
-	return
 }
 
 /** Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key */

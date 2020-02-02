@@ -29,7 +29,7 @@ func numDecodings(s string) int {
 		case s[i-1:i+1] <= "26":
 			dp1, dp0 = dp1+dp0, dp1
 		default:
-			dp1, dp0 = dp1, dp1
+			dp0 = dp1
 		}
 	}
 

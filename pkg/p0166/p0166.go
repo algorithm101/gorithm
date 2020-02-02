@@ -32,7 +32,7 @@ func fractionToDecimal(numerator int, denominator int) string {
 
 			if i, ok := indexes[numerator]; ok {
 				// Repeated
-				repeated := ret[i:len(ret)]
+				repeated := ret[i:]
 				ret = ret[0:i]
 				ret = ret + "(" + repeated + ")"
 				break

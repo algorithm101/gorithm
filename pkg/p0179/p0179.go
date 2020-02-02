@@ -55,5 +55,5 @@ func largestNumber(nums []int) string {
 	if i >= len(r) {
 		return "0"
 	}
-	return r[i:len(r)]
+	return r[i:]
 }

@@ -17,12 +17,12 @@ import (
 )
 
 type result struct {
-	arg1   []int
-	arg2   int
-	target []int
+	arg1   []int //nolint
+	arg2   int   //nolint
+	target []int //nolint
 }
 
-var values = []result{
+var values = []result{ //nolint
 	{
 		arg1:   []int{1, 2, 6, 3, 4, 5, 6},
 		arg2:   6,

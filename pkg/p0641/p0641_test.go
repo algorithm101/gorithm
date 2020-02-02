@@ -21,7 +21,7 @@ type result struct {
 	target bool
 }
 
-var values = []result{
+var values = []result{ //nolint
 	{
 		arg1:   5,
 		target: true,

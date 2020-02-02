@@ -31,7 +31,7 @@ func wordBreak(s string, wordDict []string) bool {
 			for i := 0; i < len(s); i++ {
 				w := s[0 : i+1]
 				if _, ok := wordMap[w]; ok {
-					if _fn(s[i+1:len(s)], fn) {
+					if _fn(s[i+1:], fn) {
 						return true
 					}
 				}

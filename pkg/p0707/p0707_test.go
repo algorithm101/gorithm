@@ -25,7 +25,7 @@ type result struct {
 	target string
 }
 
-var values = []result{
+var values = []result{ //nolint
 	{
 		arg1:   "babad",
 		target: "bab",

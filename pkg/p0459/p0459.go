@@ -20,5 +20,5 @@ import (
 
 func repeatedSubstringPattern(s string) bool {
 	r := s + s
-	return strings.Index(r[1:len(r)-1], s) != -1
+	return strings.Contains(r[1:len(r)-1], s)
 }

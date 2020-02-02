@@ -17,8 +17,8 @@ package p0399
 // TODO: 增加 bfs 解法
 // TODO: 增加并查集解法
 func calcEquation(equations [][]string, values []float64, queries [][]string) []float64 {
-	graph := make(map[string][]string, 0)
-	weight := make(map[[2]string]float64, 0)
+	graph := make(map[string][]string)
+	weight := make(map[[2]string]float64)
 
 	for i, v := range equations {
 		graph[v[0]] = append(graph[v[0]], v[1])
@@ -59,7 +59,7 @@ func calcEquation(equations [][]string, values []float64, queries [][]string) []
 
 	res := make([]float64, 0)
 	for _, query := range queries {
-		res = append(res, _dfs(query[0], query[1], make(map[string]bool, 0)))
+		res = append(res, _dfs(query[0], query[1], make(map[string]bool)))
 	}
 	return res
 }

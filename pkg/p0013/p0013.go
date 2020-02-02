@@ -46,7 +46,7 @@ func romanToInt(s string) int {
 			}
 		}
 
-		num1, _ := maps1[rune(s[i])]
+		num1 := maps1[rune(s[i])]
 		ret += num1
 	}
 

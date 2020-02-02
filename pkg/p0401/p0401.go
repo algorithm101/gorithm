@@ -18,7 +18,7 @@ import (
 	"fmt"
 )
 
-func _readBinaryWatch01(num int) []string {
+func _readBinaryWatch01(num int) []string { //nolint
 	hours := map[int][]string{
 		0: []string{"0"},
 		1: []string{"1", "2", "4", "8"},

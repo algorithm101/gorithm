@@ -27,7 +27,7 @@ type p0024TestSuite struct {
 
 type result struct {
 	arg1   []int
-	arg2   []int
+	arg2   []int //nolint
 	target []int
 }
 

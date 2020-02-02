@@ -39,7 +39,7 @@ func levelOrderBottom(root *TreeNode) [][]int {
 	ret := make([][]int, 0)
 	nextNodes := make([]*TreeNode, 1)
 	nextNodes[0] = root
-	v := make([]int, 0)
+	v := make([]int, 0) //nolint
 	for len(nextNodes) != 0 {
 		v, nextNodes = _levelOrderBottom(nextNodes)
 		if len(v) != 0 {

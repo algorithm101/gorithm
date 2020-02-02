@@ -21,7 +21,7 @@ type result struct {
 	target int
 }
 
-var values = []result{
+var values = []result{ //nolint
 	{
 		arg1:   "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext",
 		target: 32,

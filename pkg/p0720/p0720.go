@@ -34,7 +34,7 @@ func longestWord(words []string) string {
 
 		w, exists := words[i], true
 		for j := 1; j < len(w); j++ {
-			if maps[w[0:j]] == false {
+			if !maps[w[0:j]] {
 				exists = false
 				break
 			}

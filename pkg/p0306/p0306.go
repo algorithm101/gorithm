@@ -69,8 +69,6 @@ func isAdditiveNumber(num string) bool {
 			}
 			return false
 		}
-
-		return true
 	}
 
 	for i := 1; i < len(num)/2+1; i++ {

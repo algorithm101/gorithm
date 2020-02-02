@@ -19,7 +19,7 @@ import (
 )
 
 func numSpecialEquivGroups(A []string) int {
-	maps := make(map[string]int, 0)
+	maps := make(map[string]int)
 
 	_trans := func(s string) string {
 		ret, w := make([]byte, len(s)+1), 0

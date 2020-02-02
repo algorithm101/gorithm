@@ -49,7 +49,7 @@ import (
 type NestedInteger struct {
 	isInteger bool
 	v         int
-	sub       []*NestedInteger
+	sub       []*NestedInteger //nolint
 }
 
 func (n NestedInteger) IsInteger() bool {

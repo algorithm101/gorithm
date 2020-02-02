@@ -21,7 +21,7 @@ import (
 // TreeNode is binary tree node
 type TreeNode = utils.TreeNode
 
-func searchBST(root *TreeNode, val int) *TreeNode {
+func searchBST(root *TreeNode, val int) *TreeNode { //nolint
 	if root == nil || root.Val == val {
 		return root
 	}

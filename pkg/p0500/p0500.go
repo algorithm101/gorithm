@@ -26,7 +26,7 @@ func findWords(words []string) []string {
 	}
 	_getRow := func(w rune) int {
 		for i, row := range rows {
-			if strings.Index(row, string(w)) != -1 {
+			if strings.Contains(row, string(w)) {
 				return i
 			}
 		}

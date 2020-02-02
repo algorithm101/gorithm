@@ -14,18 +14,13 @@
 
 package p0697
 
-import (
-	"math"
-)
-
 func findShortestSubArray(nums []int) int {
-	mapcount, mapindex, min, du := make(map[int]int), make(map[int]int), math.MaxInt32, 0
+	mapcount, mapindex, min, du := make(map[int]int), make(map[int]int), 1, 1
 
 	if len(nums) == 0 {
 		return 0
 	}
 
-	min, du = 1, 1
 	mapcount[nums[0]] = 1
 	mapindex[nums[0]] = 0
 

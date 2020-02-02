@@ -49,7 +49,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			Val:  carry,
 			Next: nil,
 		}
-		end = end.Next
+		end = end.Next //nolint
 	}
 
 	return head.Next

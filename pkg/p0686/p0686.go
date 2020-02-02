@@ -25,10 +25,10 @@ func repeatedStringMatch(A string, B string) int {
 		dest += A
 	}
 
-	if strings.Index(dest, B) != -1 {
+	if strings.Contains(dest, B) {
 		return count
 	}
-	if strings.Index(dest+A, B) != -1 {
+	if strings.Contains(dest+A, B) {
 		return count + 1
 	}
 

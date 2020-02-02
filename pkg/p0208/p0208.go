@@ -123,7 +123,6 @@ func (n *trieNode) Add(value string) {
 	}
 	n.count = 0
 	n.key = prefix
-	return
 }
 
 func (n *trieNode) Search(value string) bool {

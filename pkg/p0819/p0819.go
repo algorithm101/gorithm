@@ -43,7 +43,7 @@ func mostCommonWord(paragraph string, banned []string) string {
 		} else {
 			if last != -1 {
 				s := string(paragraphBytes[last:i])
-				if bannedMaps[s] == false {
+				if !bannedMaps[s] {
 					count := usedMaps[s]
 					usedMaps[s] = count + 1
 				}
