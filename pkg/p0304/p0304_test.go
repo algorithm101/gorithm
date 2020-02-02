@@ -25,8 +25,8 @@ type p0304TestSuite struct {
 }
 
 type result struct {
-	arg1   []int
-	target int
+	arg1   []int //nolint
+	target int   //nolint
 }
 
 var values = []result{ //nolint
@@ -42,11 +42,11 @@ var values = []result{ //nolint
 
 func (s *p0304TestSuite) Test() {
 	m := Constructor([][]int{
-		[]int{3, 0, 1, 4, 2},
-		[]int{5, 6, 3, 2, 1},
-		[]int{1, 2, 0, 1, 5},
-		[]int{4, 1, 0, 1, 7},
-		[]int{1, 0, 3, 0, 5},
+		{3, 0, 1, 4, 2},
+		{5, 6, 3, 2, 1},
+		{1, 2, 0, 1, 5},
+		{4, 1, 0, 1, 7},
+		{1, 0, 3, 0, 5},
 	})
 	s.Equal(8, m.SumRegion(2, 1, 4, 3))
 	s.Equal(11, m.SumRegion(1, 1, 2, 2))

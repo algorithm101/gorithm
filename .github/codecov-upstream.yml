@@ -1,0 +1,11 @@
+# Documentation: https://docs.codecov.io/docs/codecov-yaml
+
+codecov:
+  # Avoid "Missing base report" due to committing CHANGES.rst with "[CI skip]"
+  # https://github.com/codecov/support/issues/363
+  # https://docs.codecov.io/docs/comparing-commits
+  allow_coverage_offsets: true
+
+  token: af60ae97-cdc9-462c-97ef-d38740f66e0c
+
+comment: off

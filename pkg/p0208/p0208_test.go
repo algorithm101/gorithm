@@ -33,9 +33,9 @@ func printTrie(n *trieNode, prefix string) {
 }
 
 type result struct {
-	arg1   []string
+	arg1   []string //nolint
 	arg2   []string //nolint
-	target []bool
+	target []bool   //nolint
 }
 
 var values = []result{ //nolint

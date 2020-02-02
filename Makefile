@@ -82,21 +82,21 @@ GOLANGCI_LINT := $(BIN_DIR)/golangci-lint
 # All targets.
 .PHONY: all
 
-all: lint test
+all: lint test ## run lint, test, default
 
 # more info about `GOGC` env: https://github.com/golangci/golangci-lint#memory-usage-of-golangci-lint
-lint: $(GOLANGCI_LINT)
+lint: $(GOLANGCI_LINT) ## code analysis
 	@$(GOLANGCI_LINT) run -v
 
 $(GOLANGCI_LINT):
 	curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b $(BIN_DIR) v1.20.1
 
-test:
+test: ## run unit test (or plus integration test)
 	@./hack/unittest.sh
 
-.PHONY: test-docker cp
+.PHONY: test-docker cp fmt
 
-test-docker:
+test-docker:  ## run unit test (in docker containers)
 	@docker run --rm -t                                        \
       -e GOOS=linux                                            \
 	  -e GOARCH=amd64                                          \
@@ -110,10 +110,16 @@ test-docker:
 
 CP_SRC ?= 0001
 CP_DST ?= 
-cp:
+cp:  ## copy pkg/pxxxx from template
 	./hack/cp.sh -s $(CP_SRC) -d $(CP_DST)
 
-help: ## Display this help screen
+FILES ?= $(shell find . -name "*.go")
+fmt: ## gofmt all go file
+	@for file in $(FILES); do             \
+		gofmt -s -w $${file};             \
+	done
+
+help: ## display this help string
 	@grep -h -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 	
 .PHONY: clean

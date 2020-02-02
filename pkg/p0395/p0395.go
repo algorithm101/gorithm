@@ -31,7 +31,7 @@ func longestSubstring(s string, k int) int {
 	for i := 0; i < len(s); i++ {
 		if ct[int(s[i]-'a')] < k {
 			left := longestSubstring(s[0:i], k)
-			right := longestSubstring(s[i+1:len(s)], k)
+			right := longestSubstring(s[i+1:], k)
 			return int(math.Max(float64(left), float64(right)))
 		}
 	}

@@ -29,7 +29,7 @@ var values = []result{
 	{
 		arg1: "abbxxxxzzy",
 		target: [][]int{
-			[]int{3, 6},
+			{3, 6},
 		},
 	},
 	{
@@ -39,9 +39,9 @@ var values = []result{
 	{
 		arg1: "abcdddeeeeaabbbcd",
 		target: [][]int{
-			[]int{3, 5},
-			[]int{6, 9},
-			[]int{12, 14},
+			{3, 5},
+			{6, 9},
+			{12, 14},
 		},
 	},
 }

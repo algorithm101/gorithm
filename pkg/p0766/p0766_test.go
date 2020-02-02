@@ -32,22 +32,22 @@ type result struct {
 var values = []result{
 	{
 		arg1: [][]int{
-			[]int{1, 2, 3, 4},
-			[]int{5, 1, 2, 3},
-			[]int{9, 5, 1, 2},
+			{1, 2, 3, 4},
+			{5, 1, 2, 3},
+			{9, 5, 1, 2},
 		},
 		target: true,
 	},
 	{
 		arg1: [][]int{
-			[]int{1, 2},
-			[]int{2, 2},
+			{1, 2},
+			{2, 2},
 		},
 		target: false,
 	},
 	{
 		arg1: [][]int{
-			[]int{65, 98, 57},
+			{65, 98, 57},
 		},
 		target: true,
 	},

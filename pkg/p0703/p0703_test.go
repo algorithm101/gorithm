@@ -21,8 +21,8 @@ import (
 )
 
 type result struct {
-	arg1   string
-	target string
+	arg1   string //nolint
+	target string //nolint
 }
 
 var values = []result{ //nolint

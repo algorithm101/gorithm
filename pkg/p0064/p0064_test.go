@@ -32,9 +32,9 @@ type result struct {
 var values = []result{
 	{
 		arg1: [][]int{
-			[]int{1, 3, 1},
-			[]int{1, 5, 1},
-			[]int{4, 2, 1},
+			{1, 3, 1},
+			{1, 5, 1},
+			{4, 2, 1},
 		},
 		target: 7,
 	},

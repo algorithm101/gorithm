@@ -26,9 +26,9 @@ var values = []result{
 	{
 		arg1: []int{3, 9, 20, 0xFFFFFFFF, 0xFFFFFFFF, 15, 7},
 		target: [][]int{
-			[]int{15, 7},
-			[]int{9, 20},
-			[]int{3},
+			{15, 7},
+			{9, 20},
+			{3},
 		},
 	},
 }

@@ -33,9 +33,9 @@ var values = []result{
 	{
 		arg1: []string{"eat", "tea", "tan", "ate", "nat", "bat"},
 		target: [][]string{
-			[]string{"bat"},
-			[]string{"ate", "eat", "tea"},
-			[]string{"nat", "tan"},
+			{"bat"},
+			{"ate", "eat", "tea"},
+			{"nat", "tan"},
 		},
 	},
 }

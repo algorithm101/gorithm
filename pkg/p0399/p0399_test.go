@@ -26,16 +26,16 @@ type result struct {
 var values = []result{
 	{
 		arg1: [][]string{
-			[]string{"a", "b"},
-			[]string{"b", "c"},
+			{"a", "b"},
+			{"b", "c"},
 		},
 		arg2: []float64{2.0, 3.0},
 		arg3: [][]string{
-			[]string{"a", "c"},
-			[]string{"b", "a"},
-			[]string{"a", "e"},
-			[]string{"a", "a"},
-			[]string{"x", "x"},
+			{"a", "c"},
+			{"b", "a"},
+			{"a", "e"},
+			{"a", "a"},
+			{"x", "x"},
 		},
 		target: []float64{6.0, 0.5, -1.0, 1.0, -1.0},
 	},

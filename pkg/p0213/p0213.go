@@ -40,5 +40,5 @@ func rob(nums []int) int {
 		return _max(max1, max2)
 	}
 
-	return _max(_rob(nums[0:len(nums)-1]), _rob(nums[1:len(nums)]))
+	return _max(_rob(nums[0:len(nums)-1]), _rob(nums[1:]))
 }

@@ -22,7 +22,7 @@ import (
 
 type result struct {
 	arg1    []int
-	target  int
+	target  int //nolint
 	target2 []int
 }
 

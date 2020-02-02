@@ -32,42 +32,42 @@ type result struct {
 var values = []result{
 	{
 		arg1: []Interval{
-			Interval{Start: 1, End: 3},
-			Interval{Start: 2, End: 6},
-			Interval{Start: 8, End: 10},
-			Interval{Start: 15, End: 18},
+			{Start: 1, End: 3},
+			{Start: 2, End: 6},
+			{Start: 8, End: 10},
+			{Start: 15, End: 18},
 		},
 		target: []Interval{
-			Interval{Start: 1, End: 6},
-			Interval{Start: 8, End: 10},
-			Interval{Start: 15, End: 18},
+			{Start: 1, End: 6},
+			{Start: 8, End: 10},
+			{Start: 15, End: 18},
 		},
 	},
 	{
 		arg1: []Interval{
-			Interval{Start: 1, End: 4},
-			Interval{Start: 4, End: 5},
+			{Start: 1, End: 4},
+			{Start: 4, End: 5},
 		},
 		target: []Interval{
-			Interval{Start: 1, End: 5},
+			{Start: 1, End: 5},
 		},
 	},
 	{
 		arg1: []Interval{
-			Interval{Start: 1, End: 4},
-			Interval{Start: 0, End: 4},
+			{Start: 1, End: 4},
+			{Start: 0, End: 4},
 		},
 		target: []Interval{
-			Interval{Start: 0, End: 4},
+			{Start: 0, End: 4},
 		},
 	},
 	{
 		arg1: []Interval{
-			Interval{Start: 1, End: 4},
-			Interval{Start: 2, End: 3},
+			{Start: 1, End: 4},
+			{Start: 2, End: 3},
 		},
 		target: []Interval{
-			Interval{Start: 1, End: 4},
+			{Start: 1, End: 4},
 		},
 	},
 }

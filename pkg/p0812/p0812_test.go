@@ -28,11 +28,11 @@ type result struct {
 var values = []result{
 	{
 		arg1: [][]int{
-			[]int{0, 0},
-			[]int{0, 1},
-			[]int{1, 0},
-			[]int{0, 2},
-			[]int{2, 0},
+			{0, 0},
+			{0, 1},
+			{1, 0},
+			{0, 2},
+			{2, 0},
 		},
 		target: 2,
 	},

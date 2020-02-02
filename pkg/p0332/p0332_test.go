@@ -24,20 +24,20 @@ type result struct {
 var values = []result{
 	{
 		arg1: [][]string{
-			[]string{"MUC", "LHR"},
-			[]string{"JFK", "MUC"},
-			[]string{"SFO", "SJC"},
-			[]string{"LHR", "SFO"},
+			{"MUC", "LHR"},
+			{"JFK", "MUC"},
+			{"SFO", "SJC"},
+			{"LHR", "SFO"},
 		},
 		target: []string{"JFK", "MUC", "LHR", "SFO", "SJC"},
 	},
 	{
 		arg1: [][]string{
-			[]string{"JFK", "SFO"},
-			[]string{"JFK", "ATL"},
-			[]string{"SFO", "ATL"},
-			[]string{"ATL", "JFK"},
-			[]string{"ATL", "SFO"},
+			{"JFK", "SFO"},
+			{"JFK", "ATL"},
+			{"SFO", "ATL"},
+			{"ATL", "JFK"},
+			{"ATL", "SFO"},
 		},
 		target: []string{"JFK", "ATL", "JFK", "SFO", "ATL", "SFO"},
 	},

@@ -36,8 +36,8 @@ var values = []result{
 		arg1: 3,
 		arg2: 3,
 		arg3: [][]int{
-			[]int{2, 2},
-			[]int{3, 3},
+			{2, 2},
+			{3, 3},
 		},
 		target: 4,
 	},

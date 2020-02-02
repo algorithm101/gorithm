@@ -34,25 +34,25 @@ type result struct {
 var values = []result{
 	{
 		arg1: [][]int{
-			[]int{1, 2},
-			[]int{3, 4},
+			{1, 2},
+			{3, 4},
 		},
 		arg2: 1,
 		arg3: 4,
 		target: [][]int{
-			[]int{1, 2, 3, 4},
+			{1, 2, 3, 4},
 		},
 	},
 	{
 		arg1: [][]int{
-			[]int{1, 2},
-			[]int{3, 4},
+			{1, 2},
+			{3, 4},
 		},
 		arg2: 2,
 		arg3: 4,
 		target: [][]int{
-			[]int{1, 2},
-			[]int{3, 4},
+			{1, 2},
+			{3, 4},
 		},
 	},
 }
